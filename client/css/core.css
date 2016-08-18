@@ -1,0 +1,16 @@
+ul li{
+	list-style: none;
+}
+li{
+	display: inline-block;
+}
+.top-nav{
+	font-style: none;
+	padding: 5px 5px;
+	border-right: 1px solid black;
+}
+
+.nav-text{
+	font-size: 24px;
+	font-style: none;
+}
