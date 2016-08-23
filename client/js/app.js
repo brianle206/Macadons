@@ -21,7 +21,7 @@ myModule.config(function($routeProvider){
 	.when('/contact',{
 		templateUrl: "partials/contact.html"
 	})
-	.when('/faq',{
+	.when('/faqs',{
 		templateUrl: "partials/faq.html"
 	})
 	
