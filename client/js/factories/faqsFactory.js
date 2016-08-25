@@ -9,5 +9,11 @@ myModule.factory('faqsFactory', function($http){
 		})
 	}
 
+	factory.addFaq = function(info, callback){
+		$http.post('/addFaq', info).success(function(output){
+			callback(output)
+		})
+	}
+
 	return factory
 })

@@ -9,4 +9,9 @@ module.exports = function(app){
 	app.get('/getFaqs', function(req, res){
 		faqs.getAllFaqs(req, res);
 	})
+
+	// add a faq
+	app.post('/addFaq', function(req, res){
+		faqs.addFaq(req, res);
+	})
 }

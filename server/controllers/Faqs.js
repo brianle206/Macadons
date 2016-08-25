@@ -12,5 +12,17 @@ module.exports = {
 				res.json(faqs)
 			}
 		})
+	},
+
+	addFaq : function(req, res) {
+		new_Faq = new Faqs(req.body);
+		new_Faq.save(function(err, faq){
+			if(err){
+				res.json(err)
+			}
+			else{
+				res.redirect('/getFaqs')
+			}
+		})
 	}
 }
