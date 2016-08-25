@@ -1,0 +1,18 @@
+<div ng-controller="faqController">
+	<h1>FAQs</h1>
+
+	<div ng-repeat="faq in faqs">
+			<h3 ng-bind="faq.question"></h3>
+			<p ng-bind="faq.answer"></p>
+	</div>
+
+
+
+	<form>
+		Question: <input type="text" name="question" ng-model="faq.question">
+		Answer: <textarea type="text" name="answer" ng-model="faq.answer"></textarea>
+		<button ng-click="addQ(faq)">Enter</button>
+	</form>
+
+</div>
+

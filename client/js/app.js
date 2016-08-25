@@ -5,6 +5,7 @@ myModule.config(function($routeProvider){
 
 	.when('/',{
 		templateUrl: "partials/home.html",
+		// controller : 'faqController'
 	})
 	.when('/about',{
 		templateUrl: "partials/about.html"
@@ -20,6 +21,15 @@ myModule.config(function($routeProvider){
 	})
 	.when('/contact',{
 		templateUrl: "partials/contact.html"
+	})
+	.when('/faqs',{
+		templateUrl: "partials/faq.html"
+	})
+	.when('/admin',{
+		templateUrl: "partials/admin.html"
+	})
+	.otherwise({
+		redirectTo: '/'
 	})
 	
 })

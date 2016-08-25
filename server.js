@@ -1,10 +1,17 @@
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
+var path = require('path');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(express.static(__dirname+'/client'));
+app.use(express.static(path.join(__dirname, "./node_modules")));
+
+app.use(express.static(path.join(__dirname, "./client")));
+
+require("./server/config/mongoose.js");
+
+require("./server/config/routes.js")(app);
 
 
 
