@@ -3,6 +3,16 @@
 	<p>This can be FAQs stored in DB with three data (question ,answer, display).</p>
 	<p>Admin view will have a form for them to enter in questions and answers</p>
 	<p>Admin will also have ability to delete any question and answer they way</p>
+	<form>
+		<input type="text" name="question" ng-model="faqs.question">
+		<button ng-click="submitQ(faqs)">Enter</button>
+	</form>
+
+
+	<div ng-repeat="faq in faqs">
+			<p ng-bind="faq.question"></p>
+			<p ng-bind="faq.answer"></p>
+	</div>
 
 </div>
 

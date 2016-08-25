@@ -5,6 +5,7 @@ myModule.config(function($routeProvider){
 
 	.when('/',{
 		templateUrl: "partials/home.html",
+		controller : 'faqController'
 	})
 	.when('/about',{
 		templateUrl: "partials/about.html"
