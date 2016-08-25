@@ -25,5 +25,11 @@ myModule.config(function($routeProvider){
 	.when('/faqs',{
 		templateUrl: "partials/faq.html"
 	})
+	.when('/admin',{
+		templateUrl: "partials/admin.html"
+	})
+	.otherwise({
+		redirectTo: '/'
+	})
 	
 })
