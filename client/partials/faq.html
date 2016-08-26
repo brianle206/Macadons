@@ -8,7 +8,7 @@
 
 
 
-	<form>
+	<form ng-if="user">
 		Question: <input type="text" name="question" ng-model="faq.question">
 		Answer: <textarea type="text" name="answer" ng-model="faq.answer"></textarea>
 		<button ng-click="addQ(faq)">Enter</button>

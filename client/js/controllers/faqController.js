@@ -1,5 +1,8 @@
 angular.module("myApp");
-myModule.controller("faqController", function($scope,$window, faqsFactory){
+myModule.controller("faqController", function($scope,$window, faqsFactory, userFactory){
+
+	$scope.user = userFactory.getUser()
+
 
 	faqsFactory.getAllFaqs(function(data){
 		$scope.faqs = data;
