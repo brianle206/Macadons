@@ -1,6 +1,7 @@
 angular.module("myApp");
 myModule.controller("userController", function($scope,$window, $location, userFactory){
 
+	// get current user
 	$scope.user = userFactory.getUser();
 
 	$scope.login = function(){
@@ -16,11 +17,11 @@ myModule.controller("userController", function($scope,$window, $location, userFa
 	}
 
 	$scope.signup = function(){
-		console.log($scope.userAd)
 		userFactory.signup($scope.userAd, function(data){
 			if('alert' in data){
 				var name = 'alert';
-				$scope.alert = data[name]
+				$window.alert(data[name])
+				$scope.userAd = {}
 				$location.url('/admin')
 			}
 			else{

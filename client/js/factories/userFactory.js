@@ -5,7 +5,6 @@ myModule.factory('userFactory', function($http, $sessionStorage){
 
 	factory.login = function(info, callback){
 		$http.post('/login', info).success(function(output){
-			console.log("after loggin in", output)
 			$sessionStorage.currUser = output
 			callback(output)
 		})
@@ -13,7 +12,12 @@ myModule.factory('userFactory', function($http, $sessionStorage){
 
 	factory.signup = function(info, callback){
 		$http.post('/signup', info).success(function(output){
+			if('alert' in output){
+				console.log("ERRRORROEOREO")
+			}
+			else{
 			$sessionStorage.currUser = output
+			}	
 			callback(output)
 		})
 	}

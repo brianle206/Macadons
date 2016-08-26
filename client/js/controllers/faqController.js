@@ -1,6 +1,7 @@
 angular.module("myApp");
 myModule.controller("faqController", function($scope,$window, faqsFactory, userFactory){
 
+	// get current user
 	$scope.user = userFactory.getUser()
 
 
