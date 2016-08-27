@@ -11,7 +11,10 @@ myModule.controller("userController", function($scope,$window, $location, userFa
 				$scope.admin = {}
 			}
 			else {
+
 				$location.url('/')
+				$window.location.reload()
+
 			}
 		})
 	}
@@ -33,6 +36,7 @@ myModule.controller("userController", function($scope,$window, $location, userFa
 	$scope.logout = function(){
 		userFactory.logout()
 		$location.url('/')
+		$window.location.reload();
 	}
 
 })
