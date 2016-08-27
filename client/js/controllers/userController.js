@@ -12,7 +12,7 @@ myModule.controller("userController", function($scope,$window, $location, userFa
 			}
 			else {
 
-				$location.url('/')
+				// $location.url('/')
 				$window.location.reload()
 
 			}
@@ -35,7 +35,7 @@ myModule.controller("userController", function($scope,$window, $location, userFa
 
 	$scope.logout = function(){
 		userFactory.logout()
-		$location.url('/')
+		// $location.url('/')
 		$window.location.reload();
 	}
 
