@@ -24,4 +24,6 @@ module.exports = function(app){
 	app.post('/addFaq', function(req, res){
 		faqs.addFaq(req, res);
 	})
+
+
 }

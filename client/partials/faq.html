@@ -4,15 +4,25 @@
 	<div ng-repeat="faq in faqs">
 			<h3 ng-bind="faq.question"></h3>
 			<p ng-bind="faq.answer"></p>
+			<span ng-if="user"><a href="">Delete</a></span>
+
 	</div>
 
 
-
 	<form ng-if="user">
-		Question: <input type="text" name="question" ng-model="faq.question">
-		Answer: <textarea type="text" name="answer" ng-model="faq.answer"></textarea>
-		<button ng-click="addQ(faq)">Enter</button>
-	</form>
+		<hr>
+		<h1>Add new Question and Answer</h1>
+			<div class="form-group">
+				<label for="question">Question</label>
+				<input type="text" class="form-control" id="question" placeholder="Question" ng-model="faq.question">
+			</div>
+			<div class="form-group">
+				<label for="answer">Answer</label>
+				<input type="text" class="form-control" id="answer" placeholder="Answer" ng-model="faq.answer">
+			</div>
+
+			<button type="submit" class="btn btn-default" ng-click="addQ(faq)">Add</button>
+		</form>
 
 </div>
 
