@@ -1,5 +1,8 @@
 body{
 	background: url('/images/macadonsbackground.jpg');
+	/*padding-top: 120px;*/
+
+
 }
 
 ul li{
@@ -24,7 +27,7 @@ a{
 }
 .header{
 	background-image: url('../images/banner.jpg');
-	height: 400px;
+	height: 300px;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -32,6 +35,7 @@ a{
 	position: relative;
 	left: 40%;
 	top: 10%;
+	width: 300px;
 }
 .rounded{
 	border-radius: 50%;

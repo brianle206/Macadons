@@ -1,13 +1,16 @@
 var express = require('express');
-var app = express();
+var multer = require('multer');
 var bodyParser = require('body-parser');
 var path = require('path');
+
+var app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(path.join(__dirname, "./node_modules")));
 
 app.use(express.static(path.join(__dirname, "./client")));
+
 
 require("./server/config/mongoose.js");
 

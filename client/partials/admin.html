@@ -1,1 +1,24 @@
-<h1>Admin</h1>
+<div ng-controller="userController">
+	<h1>Admin</h1>
+	<button ng-if="user" ng-click="logout()">Logout</button>
+{{user}}
+
+	<form>
+	<h1>Login</h1>
+	Username : <input type="text" name="username" ng-model="admin.username">
+	Password : <input type="password" name="password" ng-model="admin.password">
+	<button type="button" ng-click="login(admin)">Login</button>
+
+	</form>
+
+
+	<form>
+		<h1>Register</h1>
+	First Name : <input type="text" name="first_name" ng-model="userAd.first_name">
+	Last Name : <input type="text" name="last_name" ng-model="userAd.last_name">
+	username : <input type="text" name="username" ng-model="userAd.username">
+	email : <input type="email" name="email" ng-model="userAd.email">
+	password : <input type="password" name="password" ng-model="userAd.password">
+	<button type="button" ng-click="signup(userAd)">Register</button>
+	</form>
+</div>
