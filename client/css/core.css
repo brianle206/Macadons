@@ -43,3 +43,12 @@ a{
 .space{
 	padding-top: 50px;
 }
+
+.logoutBtn {
+	width: 100px;
+	float:right;
+}
+
+.logoutBtn:hover{
+	content: url("../images/raspberry.png")
+}

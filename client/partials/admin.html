@@ -1,15 +1,68 @@
 <div ng-controller="userController">
-	<h1>Admin</h1>
-	<button ng-if="user" ng-click="logout()">Logout</button>
-{{user}}
+	<h1 ng-show="user">Current Admin
+		<img ng-show="user" src="../images/greenTea.png" class="logoutBtn" ng-click="logout()">
+	</h1>
 
-	<form>
+
+	<table ng-show="user" class="table">
+		<thead>
+			<tr>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Username</th>
+				<th>Email</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td ng-bind="user.first_name"></td>
+				<td ng-bind="user.last_name"></td>
+				<td ng-bind="user.username"></td>
+				<td ng-bind="user.email"></td>
+
+			</tr>
+		</tbody>
+	</table>
+
+<br>
+<br>
+	<table ng-show="user" class="table">
+		<h2 ng-show="user">All Admins</h2>
+		<thead>
+			<tr>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Username</th>
+				<th>Email</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="admin in allUsers">
+				<td ng-bind="admin.first_name"></td>
+				<td ng-bind="admin.last_name"></td>
+				<td ng-bind="admin.username"></td>
+				<td ng-bind="admin.email"></td>
+
+			</tr>
+		</tbody>
+	</table>
+
+
+
+
+	<form ng-show="!user">
 	<h1>Login</h1>
-	Username : <input type="text" name="username" ng-model="admin.username">
-	Password : <input type="password" name="password" ng-model="admin.password">
-	<button type="button" ng-click="login(admin)">Login</button>
-
+	<div class="form-group">
+    	<label for="loginUsername">Username</label>
+    	<input type="text" class="form-control" id="loginUsername" placeholder="Username" ng-model="admin.username">
+  	</div>
+  	<div class="form-group">
+   		<label for="loginPassword">Password</label>
+    	<input type="password" class="form-control" id="loginPassword" placeholder="Password" ng-model="admin.password">
+  	</div>
+	<button type="submit" class="btn btn-primary" ng-click="login(admin)">Login</button>
 	</form>
+
 
 
 	<form class='form-group'>
@@ -22,8 +75,35 @@
 	<input type="text" name="username" ng-model="userAd.username" class='form-control input-md'>
 	<label class='control-label col-sm-4' for='email'>email :</label>
 	<input type="email" name="email" ng-model="userAd.email" class='form-control input-md'>
-	<label class='control-label col-sm-4' for='password'>password :</label>
-	<input type="password" name="password" ng-model="userAd.password" class='form-control input-md'>
+	<div class='form-group'>
+		<label class='control-label col-sm-4' for='password'>password :</label>
+		<input type="password" name="password" ng-model="userAd.password" class='form-control input-md'>
+	</div>
 	<button type="button" ng-click="signup(userAd)" class='btn btn-primary'>Register</button>
+
+	<form ng-show="!user">
+		<h1>Register</h1>
+			<div class="form-group">
+	    	<label for="regUsername">Username</label>
+	    	<input type="text" class="form-control" id="regUsername" placeholder="Username" ng-model="userAd.username">
+	  	</div>
+	  	<div class="form-group">
+	    	<label for="regFirstName">First Name</label>
+	    	<input type="text" class="form-control" id="regFirstName" placeholder="First Name" ng-model="userAd.first_name">
+	  	</div>
+	  	<div class="form-group">
+	    	<label for="regLastName">Last Name</label>
+	    	<input type="text" class="form-control" id="regLastName" placeholder="Last Name" ng-model="userAd.last_name">
+	  	</div>
+	  	<div class="form-group">
+	    	<label for="regEmail">Email</label>
+	    	<input type="email" class="form-control" id="regEmail" placeholder="Email" ng-model="userAd.email">
+	  	</div>
+	  	<div class="form-group">
+	    	<label for="regPassword">Password</label>
+	    	<input type="text" class="form-control" id="regPassword" placeholder="Password" ng-model="userAd.password">
+	  	</div>
+		<button type="submit" class="btn btn-primary" ng-click="signup(userAd)">Login</button>
+
 	</form>
 </div>
