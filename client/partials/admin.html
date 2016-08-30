@@ -12,13 +12,18 @@
 	</form>
 
 
-	<form>
-		<h1>Register</h1>
-	First Name : <input type="text" name="first_name" ng-model="userAd.first_name">
-	Last Name : <input type="text" name="last_name" ng-model="userAd.last_name">
-	username : <input type="text" name="username" ng-model="userAd.username">
-	email : <input type="email" name="email" ng-model="userAd.email">
-	password : <input type="password" name="password" ng-model="userAd.password">
-	<button type="button" ng-click="signup(userAd)">Register</button>
+	<form class='form-group'>
+	<h1>Register</h1>
+	<label class='control-label col-sm-2' for='first_name'>First Name :</label>
+	<input type="text" name="first_name" ng-model="userAd.first_name" class='form-control input-md'>
+	<label class='control-label col-sm-2' for='last_name'>Last Name :</label>
+	<input type="text" name="last_name" ng-model="userAd.last_name" class='form-control input-md'>
+	<label class='control-label col-sm-4' for='username'>username :</label>
+	<input type="text" name="username" ng-model="userAd.username" class='form-control input-md'>
+	<label class='control-label col-sm-4' for='email'>email :</label>
+	<input type="email" name="email" ng-model="userAd.email" class='form-control input-md'>
+	<label class='control-label col-sm-4' for='password'>password :</label>
+	<input type="password" name="password" ng-model="userAd.password" class='form-control input-md'>
+	<button type="button" ng-click="signup(userAd)" class='btn btn-primary'>Register</button>
 	</form>
 </div>
