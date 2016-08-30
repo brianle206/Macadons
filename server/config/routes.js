@@ -15,6 +15,11 @@ module.exports = function(app){
 		users.userSignUp(req, res)
 	})
 
+	// get all admin users
+	app.get('/getAllUsers', function(req, res){
+		users.getAllUsers(req, res);
+	})
+
 	// get all faqs
 	app.get('/getFaqs', function(req, res){
 		faqs.getAllFaqs(req, res);

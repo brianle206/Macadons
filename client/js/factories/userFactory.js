@@ -26,6 +26,12 @@ myModule.factory('userFactory', function($http, $sessionStorage){
 		return $sessionStorage.currUser
 	}
 
+	factory.getAllUsers = function(callback){
+		$http.get('/getAllUsers').success(function(data){
+			callback(data);
+		})
+	}
+
 	factory.logout = function(){
 		$sessionStorage.currUser = null
 	}

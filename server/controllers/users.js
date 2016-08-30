@@ -54,5 +54,16 @@ module.exports = {
 				}
 			}
 		})
+	},
+
+	getAllUsers : function(req, res){
+		User.find({}, function(err, users){
+			if(err){
+				res.json(err)
+			}
+			else{
+				res.json(users)
+			}
+		})
 	}
 }

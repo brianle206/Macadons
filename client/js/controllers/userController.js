@@ -4,6 +4,10 @@ myModule.controller("userController", function($scope,$window, $location, userFa
 	// get current user
 	$scope.user = userFactory.getUser();
 
+	userFactory.getAllUsers(function(data){
+		$scope.allUsers = data;
+	})
+
 	$scope.login = function(){
 		userFactory.login($scope.admin, function(data){
 			if(data == undefined){
