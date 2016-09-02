@@ -45,8 +45,9 @@ a{
 }
 
 .logoutBtn {
-	width: 100px;
+	width: 50px;
 	float:right;
+	margin-top: 10px;
 }
 
 .logoutBtn:hover{
