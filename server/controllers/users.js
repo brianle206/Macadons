@@ -9,7 +9,7 @@ module.exports = {
 		console.log("IN SERVER CONTROLLER ", req.body)
 		User.findOne({username: req.body.username}, function(err, result){
 			if(result){
-				console.log("USER EXISTS ", result)
+				// console.log("USER EXISTS ", result)
 				bcrypt.compare(req.body.password, result.password, function(err, isMatch){
 					if(isMatch == false){
 						res.json(err)

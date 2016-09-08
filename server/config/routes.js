@@ -2,6 +2,7 @@ console.log("IN SERVER/CONFIG/ROUTES.JS FILE");
 
 var faqs = require("../controllers/faqs.js");
 var users = require('../controllers/users.js');
+var products = require('../controllers/products.js');
 
 module.exports = function(app){
 	
@@ -30,5 +31,14 @@ module.exports = function(app){
 		faqs.addFaq(req, res);
 	})
 
+	// Adding a product
+	app.post("/addProduct", function(req, res){
+		products.addProduct(req, res);
+	})
+
+	// get all products
+	app.get('/getProducts', function(req, res){
+		products.getProducts(req,res);
+	})
 
 }

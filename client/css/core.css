@@ -53,3 +53,7 @@ a{
 .logoutBtn:hover{
 	content: url("../images/raspberry.png")
 }
+
+.product_info {
+	text-align: center;
+}
