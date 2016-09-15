@@ -12,11 +12,13 @@
   	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 	<script src="js/angular.js"></script>
 	<script src="js/angular-routes.js"></script>
+	<script type="text/javascript" src="angular-animate/angular-animate.min.js"></script>
 	<script type="text/javascript" src="js/ngStorage.min.js"></script>
 	<script src='js/app.js'></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="ng-file-upload/dist/ng-file-upload-shim.min.js"></script>
 	<script type="text/javascript" src="ng-file-upload/dist/ng-file-upload.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
 	
 	<!-- Controllers and Factories -->
 	<script type="text/javascript" src="js/controllers/faqController.js"></script>
@@ -32,7 +34,8 @@
 
 	<!-- CSS Files -->
 	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/font-awesome.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 	<link href="css/core.css" rel="stylesheet">
 	<link rel="shortcut icon" href="images/Macadons-logo.png">
 	<!-- Fonts  -->
@@ -73,23 +76,17 @@
 		<div ng-view=''>
 		</div>
 	</div>
-	<div class='footer'>
+	<div class='footer nav'>
 		<div class='container'>
-			<div class='col-sm-8 col-sm-offset-2'>
-				<div class='col-sm-3'>
-				<img class='img-responsive' src="../images/facebook.png">
-				</div>
-				<div class='col-sm-3'>
-				<img class='img-responsive' src="../images/twitter.png">
-				</div>
-				<div class='col-sm-3'>
-				<img class='img-responsive' src="../images/instagram.png">
-				</div>
-				<div class='col-sm-3'>
-				<img class='img-responsive' src="../images/pintrest.png">
-				</div>
-			</div>
+				<a href="https://www.facebook.com/MacadonsSeattle/" target="_blank"><i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i></a>
+				
+				<a href=""><i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i></a>
+				
+				<a href="https://www.instagram.com/macadons/?hl=en" target="_blank"><i class="fa fa-instagram fa-3x" aria-hidden="true"></i></a>
+				
+				<a href=""><i class="fa fa-pinterest-square fa-3x" aria-hidden="true"></i></a>
 		</div>
 	</div>
+
 </body>
 </html>

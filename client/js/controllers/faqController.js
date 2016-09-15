@@ -5,6 +5,9 @@ myModule.controller("faqController", function($scope,$window, faqsFactory, userF
 	$scope.user = userFactory.getUser()
 
 
+	// show and hide faq
+	// $scope.show = false;
+
 	faqsFactory.getAllFaqs(function(data){
 		$scope.faqs = data;
 	})
@@ -20,7 +23,7 @@ myModule.controller("faqController", function($scope,$window, faqsFactory, userF
 			$scope.faq = {}
 		})
 		}
-
-
 	}
+
+
 })

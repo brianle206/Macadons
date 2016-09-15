@@ -2,9 +2,11 @@
 	<h1>FAQs</h1>
 
 	<div ng-repeat="faq in faqs">
-			<h3 ng-bind="faq.question"></h3>
-			<p ng-bind="faq.answer"></p>
-			<span ng-if="user"><a href="">Delete</a></span>
+			<h4>{{faq.question}} <i class="fa fa-chevron-down dropdown" aria-hidden="true"></i></h4> 	
+			<div>
+				<p ng-bind="faq.answer"></p>
+				<span ng-if="user"><a href="">Delete</a></span>
+			</div>
 
 	</div>
 
@@ -26,3 +28,9 @@
 
 </div>
 
+
+<!-- <h4 ng-click="show = !show"><i class="fa fa-chevron-down dropdown" aria-hidden="true"></i></h4> 	
+			<div ng-show="show">
+				<p ng-bind="faq.answer"></p>
+				<span ng-if="user"><a href="">Delete</a></span>
+			</div> -->
