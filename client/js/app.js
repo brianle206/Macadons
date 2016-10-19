@@ -1,4 +1,4 @@
-var myModule = angular.module("myApp", ["ngRoute", "ngStorage"]);
+var myModule = angular.module("myApp", ["ngRoute", "ngAnimate", "ngStorage","ngFileUpload"]);
 
 myModule.config(function($routeProvider){
 	$routeProvider
